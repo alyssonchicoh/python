@@ -51,6 +51,9 @@ create table fat_renovacao_automatica(
 	
 );
 
+# VALOR_CORRENTE
+# VALOR_ANTERIOR
+
 create table fat_alarme(
 	id int auto_increment primary key,
 	data date,
