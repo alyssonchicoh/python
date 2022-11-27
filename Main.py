@@ -1,10 +1,8 @@
 # -*- encoding:utf-8 -*-
-from service.IESService import IESService
-from service.CourseService import CourseService
-
-from repository.GenericRepository import GenericRepository
-from model.IES import IES
-from indicator.PreenchimentoCensoIndicator import PreenchimentoCensoIndicator
+from alarm.Alarm import Alarm
+from alarm.AlarmService import AlarmService
+from ies.IES import IES
+from ies.IESService import IESService
 
 
 """
@@ -17,39 +15,12 @@ class Main:
     @staticmethod
     def run():
         try:
+            alarm = Alarm()
+            service = IESService()
+            lista = service.search()
 
-            # dados = {
-            #    'name': 'nome do registro',
-            #    'cidade': 'Fortaleza',
-            #    'estado': 'Ceara'
-            # }
-
-            id = 1
-            name = "UFC"
-            cnpj = "11111"
-            radical_cnpj = "11"
-            city = "Fortaleza"
-            state = "CE"
-            address = "teste"
-            latitude = "111"
-            longitude = "222"
-            head_office = "false"
-            head_office_name = ""
-
-            ies = IES(
-                id, name, cnpj, radical_cnpj,
-                city, state, address, latitude,
-                longitude, head_office, head_office_name)
-
-        #    service = CourseService()
-
-          #  for item in service.search():
-           #     item.print()
-            #    print("----")
-
-            run = PreenchimentoCensoIndicator()
-            run.run()
-
+            for l in lista:
+                l.print_ies()
         except Exception as e:
             print(str(e))
 
