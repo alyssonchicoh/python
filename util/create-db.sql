@@ -40,7 +40,7 @@ create table fat_preenchimento_censo(
 create table fat_renovacao_automatica(
 	id int auto_increment primary key,
 	data_renovacao date, 
-	data_vencimento int,
+	data_vencimento date,
 	sequencial_de_tipo int,
 	id_ies_fk int,
 	id_curso_fk int,
@@ -53,9 +53,8 @@ create table fat_renovacao_automatica(
 
 # VALOR_CORRENTE
 # VALOR_ANTERIOR
-
 create table fat_alarme(
-	id int auto_increment primary key,
+	id serial primary key,
 	data date,
 	data_correcao date,
 	status_correcao varchar(255),
@@ -63,6 +62,8 @@ create table fat_alarme(
 	tipo_indicador varchar(255),
 	desc_nome_indicador varchar(255),
 	versao_numero_indicador varchar(255),
+	valor_corrente varchar(255),
+	valor_anterior varchar(255),
 	nome_ies varchar(255),
 	radical_cnpj_ies varchar(255),
 	cnpj_ies varchar(255),

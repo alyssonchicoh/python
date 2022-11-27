@@ -4,7 +4,6 @@ from util.BDUtil import DBUtil
 
 
 class PreenchimentoCenso:
-
     def __init__(self, id="", date="", ies=IES, course=Course):
         self._id = id
         self._date = date

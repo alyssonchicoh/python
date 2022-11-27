@@ -77,7 +77,7 @@ class IES:
 
     @ property
     def radical_cnpj(self):
-        return self.radical_cnpj
+        return self._radical_cnpj
 
     @ property
     def city(self):

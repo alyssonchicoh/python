@@ -12,6 +12,9 @@ class GenericRepository():
         db = DBConnector()
         db.inserir(sql)
 
+    def insert_by_sql_connect(self, db, sql):
+        db.inserir(sql)
+
     def insert(self, table, values):
         db = DBConnector()
         db.inserir(SQLGenerator.generator_sql_insert(table, values))
@@ -19,10 +22,6 @@ class GenericRepository():
     def search_all(self, table):
         db = DBConnector()
         return db.search(SQLGenerator.generator_sql_search_all(table))
-
-    def search_by_id():
-        pass
-
     def search_by_field(self, table, field, field_value):
         db = DBConnector()
         return db.search(SQLGenerator.generator_sql_search_by_field(table, field, field_value))

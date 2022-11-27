@@ -1,9 +1,7 @@
 # -*- encoding:utf-8 -*-
-from alarm.Alarm import Alarm
-from alarm.AlarmService import AlarmService
-from ies.IES import IES
-from ies.IESService import IESService
-
+from preenchimento_censo.PreenchimentoCensoIndicator import PreenchimentoCensoIndicator
+from renovacao_automatica.RenovacaoAutomaticaService import RenovacaoAutomaticaService
+from util.ImportData import ImportData
 
 """
     Main class. Responsible for running the application.
@@ -15,12 +13,9 @@ class Main:
     @staticmethod
     def run():
         try:
-            alarm = Alarm()
-            service = IESService()
-            lista = service.search()
-
-            for l in lista:
-                l.print_ies()
+            ImportData().generateCSV()
+            #service = RenovacaoAutomaticaService()
+            #service.run_course(2)
         except Exception as e:
             print(str(e))
 

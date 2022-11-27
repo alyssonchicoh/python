@@ -38,6 +38,8 @@ class DBUtil:
     ALARM_INDICATOR_TYPE = "tipo_indicador"
     ALARM_INDICATOR_NAME = "desc_nome_indicador"
     ALARM_INDICATOR_VERSION = "versao_numero_indicador"
+    ALARM_CURRENT_VALUE = "valor_corrente"
+    ALARM_PREVIOUS_VALUE = "valor_anterior"
     ALARM_IES_NAME = "nome_ies"
     ALARM_IES_RADICAL_CNPJ = "radical_cnpj_ies"
     ALARM_IES_CNPJ = "cnpj_ies"
@@ -62,3 +64,10 @@ class DBUtil:
     PREENCHIMENTO_CENSO_COURSE = "id_curso_fk"
 
     TABLE_NAME_RENOVACAO_AUTOMATICA = "fat_renovacao_automatica"
+
+    RENOVACAO_AUTOMATICA_ID = "id"
+    RENOVACAO_AUTOMATICA_DATE_RENOVACAO = "data_renovacao"
+    RENOVACAO_AUTOMATICA_DATE_VENCIMENTO = "data_vencimento"
+    RENOVACAO_AUTOMATICA_SEQUENTIAL_TYPE = "sequencial_de_tipo"
+    RENOVACAO_AUTOMATICA_IES = "id_ies_fk"
+    RENOVACAO_AUTOMATICA_COURSE = "id_curso_fk"

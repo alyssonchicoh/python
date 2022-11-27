@@ -1,4 +1,3 @@
-from model.Course import Course
 from course.CourseRepository import CourseRepository
 
 
