@@ -10,5 +10,4 @@ class AlarmRepository:
 
     def save(self, alarm):
         sql = Scripts().get_script(2, alarm.from_alarm())
-        print(sql)
         self._generic_repository.insert_by_sql(sql)
